@@ -9,9 +9,9 @@ const navigation = [
   { name: "Início", href: "#inicio" },
   { name: "Serviços", href: "#servicos" },
   { name: "CondFy", href: "#condfy" },
+  { name: "Plano Inteligente", href: "#plano-inteligente" },
   { name: "Diferenciais", href: "#diferenciais" },
   { name: "Sobre", href: "#sobre" },
-  { name: "Atuação", href: "#atuacao" },
   { name: "Contato", href: "#contato" },
 ]
 
