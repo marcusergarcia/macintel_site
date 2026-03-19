@@ -90,7 +90,7 @@ export function Services() {
               Nossos Serviços
             </span>
             <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-[1.1]">
-              Soluções completas em 
+              Soluções completas em
               <span className="text-accent"> segurança</span>
             </h2>
           </div>
@@ -98,7 +98,7 @@ export function Services() {
             Instalação e manutenção especializada para condomínios em toda São Paulo.
           </p>
         </div>
-        
+
         {/* Carousel */}
         <Carousel
           opts={{
@@ -106,8 +106,8 @@ export function Services() {
             loop: true,
           }}
           plugins={[plugin.current]}
-          onMouseEnter={plugin.current.stop}
-          onMouseLeave={plugin.current.play}
+          onMouseEnter={() => plugin.current.stop()}
+          onMouseLeave={() => plugin.current.play()}
           className="w-full"
         >
           <CarouselContent className="-ml-4">
@@ -123,7 +123,7 @@ export function Services() {
                         className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                      
+
                       {/* Title overlay */}
                       <div className="absolute bottom-0 left-0 right-0 p-6">
                         <h3 className="text-2xl font-bold text-white leading-tight">
@@ -131,29 +131,29 @@ export function Services() {
                         </h3>
                       </div>
                     </div>
-                    
+
                     {/* Content */}
                     <div className="p-6 flex flex-col flex-grow">
                       <p className="text-muted-foreground text-base leading-relaxed mb-6">
                         {service.description}
                       </p>
-                      
+
                       {/* Features */}
                       <div className="flex flex-wrap gap-2 mb-6">
                         {service.features.map((feature) => (
-                          <span 
-                            key={feature} 
+                          <span
+                            key={feature}
                             className="inline-flex items-center px-3 py-1.5 bg-accent/10 text-accent text-sm font-medium rounded-full"
                           >
                             {feature}
                           </span>
                         ))}
                       </div>
-                      
+
                       {/* CTA */}
                       <div className="mt-auto">
                         <Button asChild className="w-full bg-accent hover:bg-accent/90 text-white h-12 text-base font-bold rounded-xl group/btn">
-                          <a 
+                          <a
                             href={`https://wa.me/551152419494?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20${encodeURIComponent(service.title)}.`}
                             target="_blank"
                             rel="noopener noreferrer"
@@ -170,7 +170,7 @@ export function Services() {
               </CarouselItem>
             ))}
           </CarouselContent>
-          
+
           {/* Navigation */}
           <div className="flex items-center justify-center gap-4 mt-12">
             <CarouselPrevious className="static translate-y-0 h-14 w-14 rounded-full border-2 border-accent/20 hover:border-accent hover:bg-accent hover:text-white transition-all" />
