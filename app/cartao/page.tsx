@@ -4,24 +4,23 @@ import { useState } from "react"
 import { 
   MessageCircle, 
   Phone, 
-  UserPlus, 
+  Download, 
   Share2, 
   Mail, 
   MapPin, 
   Globe, 
-  Shield, 
-  Camera, 
-  Key, 
-  Smartphone,
   Check,
-  X
+  X,
+  Instagram
 } from "lucide-react"
 
 const services = [
-  { icon: Camera, label: "Câmeras de Segurança" },
-  { icon: Key, label: "Controle de Acesso" },
-  { icon: Smartphone, label: "Interfones" },
-  { icon: Shield, label: "Reconhecimento Facial" },
+  "Câmeras de Segurança",
+  "Reconhecimento Facial",
+  "Portões Automáticos",
+  "Controle de Acesso",
+  "Sistema CondFy",
+  "Interfones",
 ]
 
 export default function CartaoDigital() {
@@ -88,7 +87,7 @@ END:VCARD`
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#2b2d70] to-[#1a1a2e] flex items-center justify-center p-4">
+    <div className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#2b2d70] to-[#1a1a2e] flex flex-col">
       {/* Toast Notification */}
       <div
         className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
@@ -150,187 +149,140 @@ END:VCARD`
         </div>
       )}
 
-      {/* Card Container */}
-      <div className="w-full max-w-md">
-        {/* Main Card */}
-        <div className="bg-white rounded-[2rem] shadow-2xl overflow-hidden">
-          {/* Header with gradient */}
-          <div className="relative bg-gradient-to-br from-[#1a1a2e] to-[#2b2d70] px-6 pt-10 pb-16">
-            {/* Decorative circles */}
-            <div className="absolute top-0 right-0 w-40 h-40 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
-            <div className="absolute bottom-0 left-0 w-32 h-32 bg-white/5 rounded-full translate-y-1/2 -translate-x-1/2" />
-            
-            {/* Logo */}
-            <div className="relative flex justify-center">
-              <div className="w-28 h-28 bg-white rounded-2xl shadow-xl flex items-center justify-center p-2">
-                <img
-                  src="/images/logo-quadrado.png"
-                  alt="Macintel"
-                  className="w-full h-full object-contain rounded-xl"
-                />
-              </div>
-            </div>
-            
-            {/* Company Name */}
-            <div className="relative text-center mt-6">
-              <h1 className="text-2xl font-black text-white">Macintel</h1>
-              <p className="text-white/70 text-sm font-medium mt-1">
-                Segurança Eletrônica para Condomínios
-              </p>
+      {/* Header Section */}
+      <div className="relative px-6 pt-8 pb-12">
+        {/* Share Button */}
+        <button
+          onClick={handleShare}
+          className="absolute top-6 right-6 w-10 h-10 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center transition-colors"
+        >
+          <Share2 className="w-5 h-5 text-white" />
+        </button>
+
+        {/* Logo and Company Info */}
+        <div className="flex flex-col items-center">
+          <div className="w-24 h-24 bg-white rounded-2xl shadow-xl flex items-center justify-center p-2 mb-4">
+            <div className="w-full h-full bg-[#2b2d70] rounded-xl flex items-center justify-center">
+              <span className="text-white text-4xl font-black">M</span>
             </div>
           </div>
-
-          {/* Services Pills */}
-          <div className="px-6 -mt-6 relative z-10">
-            <div className="bg-gray-50 rounded-2xl p-4 shadow-sm border border-gray-100">
-              <div className="grid grid-cols-2 gap-2">
-                {services.map((service) => (
-                  <div
-                    key={service.label}
-                    className="flex items-center gap-2 bg-white rounded-xl px-3 py-2.5 shadow-sm"
-                  >
-                    <div className="w-8 h-8 bg-accent/10 rounded-lg flex items-center justify-center">
-                      <service.icon className="w-4 h-4 text-accent" />
-                    </div>
-                    <span className="text-xs font-medium text-foreground leading-tight">
-                      {service.label}
-                    </span>
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* Contact Info */}
-          <div className="px-6 py-6 space-y-3">
-            <a
-              href="https://wa.me/551152419494"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors"
-            >
-              <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-green-600" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">WhatsApp - Orçamento</p>
-                <p className="text-base font-semibold text-foreground">(11) 5241-9494</p>
-              </div>
-            </a>
-
-            <a
-              href="https://wa.me/551141189314"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors"
-            >
-              <div className="w-10 h-10 bg-green-100 rounded-xl flex items-center justify-center">
-                <MessageCircle className="w-5 h-5 text-green-600" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">WhatsApp - Fale Conosco</p>
-                <p className="text-base font-semibold text-foreground">(11) 4118-9314</p>
-              </div>
-            </a>
-
-            <a
-              href="mailto:contato@macintel.com.br"
-              className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors"
-            >
-              <div className="w-10 h-10 bg-purple-100 rounded-xl flex items-center justify-center">
-                <Mail className="w-5 h-5 text-purple-600" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">E-mail</p>
-                <p className="text-base font-semibold text-foreground">contato@macintel.com.br</p>
-              </div>
-            </a>
-
-            <a
-              href="https://www.macintel.com.br"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center gap-4 p-3 rounded-xl hover:bg-gray-50 transition-colors"
-            >
-              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center">
-                <Globe className="w-5 h-5 text-orange-600" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Site</p>
-                <p className="text-base font-semibold text-foreground">www.macintel.com.br</p>
-              </div>
-            </a>
-
-            <div className="flex items-center gap-4 p-3 rounded-xl">
-              <div className="w-10 h-10 bg-red-100 rounded-xl flex items-center justify-center">
-                <MapPin className="w-5 h-5 text-red-600" />
-              </div>
-              <div>
-                <p className="text-sm text-muted-foreground">Localização</p>
-                <p className="text-base font-semibold text-foreground">São Paulo - SP</p>
-              </div>
-            </div>
-          </div>
-
-          {/* Action Buttons */}
-          <div className="px-6 pb-6 grid grid-cols-2 gap-3">
-            <a
-              href="https://wa.me/551141189314?text=Ol%C3%A1%2C%20vim%20pelo%20cart%C3%A3o%20digital%20e%20gostaria%20de%20falar%20com%20voc%C3%AAs!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-green-500/30"
-            >
-              <MessageCircle className="w-5 h-5" />
-              <span>Fale Conosco</span>
-            </a>
-
-            <a
-              href="https://wa.me/551152419494?text=Ol%C3%A1%2C%20vim%20pelo%20cart%C3%A3o%20digital%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-blue-500/30"
-            >
-              <MessageCircle className="w-5 h-5" />
-              <span>Orçamento</span>
-            </a>
-
-            <button
-              onClick={handleSaveContact}
-              className="flex items-center justify-center gap-2 bg-[#1a1a2e] hover:bg-[#2b2d70] text-white font-semibold py-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-[#1a1a2e]/30"
-            >
-              <UserPlus className="w-5 h-5" />
-              <span>Salvar Contato</span>
-            </button>
-
-            <button
-              onClick={handleShare}
-              className="flex items-center justify-center gap-2 bg-gradient-to-r from-accent to-[#4a4a9c] hover:opacity-90 text-white font-semibold py-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-accent/30"
-            >
-              <Share2 className="w-5 h-5" />
-              <span>Compartilhar</span>
-            </button>
-          </div>
-
-          {/* Footer Tagline */}
-          <div className="bg-gradient-to-r from-gray-50 to-gray-100 px-6 py-4">
-            <p className="text-center text-sm font-bold text-accent">
-              Instalação + Tecnologia + Gestão
-            </p>
-            <p className="text-center text-xs text-muted-foreground mt-1">
-              Mais de 15 anos de experiência em segurança eletrônica
-            </p>
+          <h1 className="text-2xl font-black text-white tracking-wide">MACINTEL</h1>
+          <p className="text-accent text-sm font-medium mt-1">Segurança Eletrônica</p>
+          <div className="flex items-center gap-1.5 mt-3 text-white/60 text-sm">
+            <MapPin className="w-4 h-4" />
+            <span>São Paulo - SP</span>
           </div>
         </div>
+      </div>
 
-        {/* Bottom Link */}
-        <div className="text-center mt-6">
+      {/* Main Card Section */}
+      <div className="flex-1 bg-white rounded-t-[2rem] px-5 pt-6 pb-8">
+        {/* Tagline */}
+        <p className="text-center text-sm font-semibold text-muted-foreground mb-6">
+          Instalação + Tecnologia + Gestão
+        </p>
+
+        {/* Action Buttons */}
+        <div className="space-y-3 mb-8">
+          {/* WhatsApp - Fale Conosco */}
           <a
-            href="/"
-            className="text-white/60 hover:text-white text-sm transition-colors"
+            href="https://wa.me/551141189314?text=Ol%C3%A1%2C%20vim%20pelo%20cart%C3%A3o%20digital!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 w-full bg-green-500 hover:bg-green-600 text-white p-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-green-500/20"
           >
-            Visite nosso site completo
+            <MessageCircle className="w-6 h-6" />
+            <div className="text-left">
+              <p className="text-xs font-medium text-white/80 uppercase tracking-wide">WhatsApp</p>
+              <p className="text-base font-bold">(11) 4118-9314</p>
+            </div>
+          </a>
+
+          {/* WhatsApp - Orçamento */}
+          <a
+            href="https://wa.me/551152419494?text=Ol%C3%A1%2C%20vim%20pelo%20cart%C3%A3o%20digital%20e%20gostaria%20de%20solicitar%20um%20or%C3%A7amento!"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 w-full bg-teal-500 hover:bg-teal-600 text-white p-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-teal-500/20"
+          >
+            <Phone className="w-6 h-6" />
+            <div className="text-left">
+              <p className="text-xs font-medium text-white/80 uppercase tracking-wide">Solicitar Orçamento</p>
+              <p className="text-base font-bold">WhatsApp (11) 5241-9494</p>
+            </div>
+          </a>
+
+          {/* E-mail */}
+          <a
+            href="mailto:contato@macintel.com.br"
+            className="flex items-center gap-4 w-full bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white p-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-orange-500/20"
+          >
+            <Mail className="w-6 h-6" />
+            <div className="text-left">
+              <p className="text-xs font-medium text-white/80 uppercase tracking-wide">E-mail</p>
+              <p className="text-base font-bold">contato@macintel.com.br</p>
+            </div>
+          </a>
+
+          {/* Instagram */}
+          <a
+            href="https://instagram.com/macintel.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 w-full bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white p-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-purple-500/20"
+          >
+            <Instagram className="w-6 h-6" />
+            <div className="text-left">
+              <p className="text-xs font-medium text-white/80 uppercase tracking-wide">Instagram</p>
+              <p className="text-base font-bold">@macintel.com.br</p>
+            </div>
+          </a>
+
+          {/* Website */}
+          <a
+            href="https://www.macintel.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 w-full bg-[#1a1a2e] hover:bg-[#2b2d70] text-white p-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg shadow-[#1a1a2e]/30"
+          >
+            <Globe className="w-6 h-6" />
+            <div className="text-left">
+              <p className="text-xs font-medium text-white/80 uppercase tracking-wide">Website</p>
+              <p className="text-base font-bold">www.macintel.com.br</p>
+            </div>
           </a>
         </div>
+
+        {/* Services Section */}
+        <div className="mb-6">
+          <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
+            Nossos Serviços
+          </p>
+          <div className="flex flex-wrap gap-2">
+            {services.map((service) => (
+              <span
+                key={service}
+                className="bg-gray-100 text-foreground text-xs font-medium px-3 py-1.5 rounded-full"
+              >
+                {service}
+              </span>
+            ))}
+          </div>
+        </div>
+
+        {/* Save Contact Button */}
+        <button
+          onClick={handleSaveContact}
+          className="flex items-center justify-center gap-2 w-full bg-gray-100 hover:bg-gray-200 text-foreground font-semibold py-4 rounded-2xl transition-all active:scale-[0.98]"
+        >
+          <Download className="w-5 h-5" />
+          <span>Salvar Contato</span>
+        </button>
+
+        {/* Footer */}
+        <p className="text-center text-xs text-muted-foreground mt-6">
+          © 2026 Macintel. Todos os direitos reservados.
+        </p>
       </div>
     </div>
   )
