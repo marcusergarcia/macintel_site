@@ -10,6 +10,20 @@ export const metadata: Metadata = {
     url: "https://www.macintel.com.br/cartao",
     siteName: "Macintel",
     type: "website",
+    images: [
+      {
+        url: "/og-cartao.jpg",
+        width: 1200,
+        height: 630,
+        alt: "Macintel Segurança Eletrônica - Cartão Digital",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Macintel Segurança Eletrônica",
+    description: "Segurança eletrônica para condomínios em São Paulo",
+    images: ["/og-cartao.jpg"],
   },
 }
 
