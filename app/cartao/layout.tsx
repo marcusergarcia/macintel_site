@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next"
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.macintel.com.br"),
   title: "Cartão Digital | Macintel Segurança Eletrônica",
   description: "Cartão digital da Macintel - Segurança eletrônica para condomínios em São Paulo. Entre em contato pelo WhatsApp ou telefone.",
   keywords: "cartão digital, macintel, segurança eletrônica, condomínios, são paulo, contato",
