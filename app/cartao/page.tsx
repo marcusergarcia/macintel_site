@@ -87,7 +87,8 @@ END:VCARD`
   }
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-[#1a1a2e] via-[#2b2d70] to-[#1a1a2e] flex flex-col">
+    <div className="min-h-screen bg-[#0d0d1a] flex items-center justify-center">
+      <div className="w-full max-w-[430px] min-h-screen md:min-h-0 md:my-8 md:rounded-[2.5rem] md:shadow-2xl md:shadow-black/50 bg-gradient-to-br from-[#1a1a2e] via-[#2b2d70] to-[#1a1a2e] flex flex-col overflow-hidden md:max-h-[900px]">
       {/* Toast Notification */}
       <div
         className={`fixed top-6 left-1/2 -translate-x-1/2 z-50 transition-all duration-300 ${
@@ -283,6 +284,7 @@ END:VCARD`
         <p className="text-center text-xs text-muted-foreground mt-6">
           © 2026 Macintel. Todos os direitos reservados.
         </p>
+      </div>
       </div>
     </div>
   )
