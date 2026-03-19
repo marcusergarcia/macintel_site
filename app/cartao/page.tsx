@@ -262,14 +262,14 @@ END:VCARD`
 
         {/* Services Section */}
         <div className="mb-6">
-          <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-3">
+          <p className="text-xs font-bold text-muted-foreground uppercase tracking-wider mb-4 text-center">
             Nossos Serviços
           </p>
-          <div className="flex flex-wrap gap-2">
+          <div className="grid grid-cols-2 gap-2">
             {services.map((service) => (
               <span
                 key={service}
-                className="bg-gray-100 text-foreground text-xs font-medium px-3 py-1.5 rounded-full"
+                className="bg-gray-100 text-foreground text-xs font-medium px-3 py-2.5 rounded-xl text-center"
               >
                 {service}
               </span>
@@ -280,7 +280,7 @@ END:VCARD`
         {/* Save Contact Button */}
         <button
           onClick={handleSaveContact}
-          className="flex items-center justify-center gap-2 w-full bg-gray-100 hover:bg-gray-200 text-foreground font-semibold py-4 rounded-2xl transition-all active:scale-[0.98]"
+          className="flex items-center justify-center gap-2 w-full bg-[#1a1a2e] hover:bg-[#2b2d70] text-white font-semibold py-4 rounded-2xl transition-all active:scale-[0.98] shadow-lg"
         >
           <Download className="w-5 h-5" />
           <span>Salvar Contato</span>
