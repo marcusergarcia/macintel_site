@@ -61,14 +61,14 @@ export function Contact() {
   }
 
   return (
-    <section id="contato" className="py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="contato" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-gray-50 to-white overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="text-center max-w-3xl mx-auto mb-16">
           <span className="inline-block text-accent font-bold text-sm uppercase tracking-widest mb-4">
             Contato
           </span>
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-[1.1]">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground leading-[1.1]">
             Solicite um
             <span className="text-accent"> orçamento</span>
           </h2>
@@ -76,11 +76,11 @@ export function Contact() {
             Fale com nossa equipe e encontre a melhor solução para o seu condomínio.
           </p>
         </div>
-        
-        <div className="grid gap-12 lg:grid-cols-5">
+
+        <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-5">
           {/* Form */}
           <div className="lg:col-span-3">
-            <div className="bg-white rounded-3xl shadow-xl border border-gray-100 p-8 lg:p-12">
+            <div className="bg-white rounded-2xl sm:rounded-3xl shadow-xl border border-gray-100 p-6 sm:p-8 lg:p-12">
               <div className="flex items-center gap-3 mb-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-accent text-white">
                   <MessageCircle className="h-6 w-6" />
@@ -90,14 +90,14 @@ export function Contact() {
                   <p className="text-muted-foreground">Retornamos em até 1 hora</p>
                 </div>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="nome" className="text-base font-semibold">Nome</Label>
-                    <Input 
-                      id="nome" 
-                      placeholder="Seu nome completo" 
+                    <Input
+                      id="nome"
+                      placeholder="Seu nome completo"
                       value={nome}
                       onChange={(e) => setNome(e.target.value)}
                       required
@@ -106,9 +106,9 @@ export function Contact() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="telefone" className="text-base font-semibold">Telefone</Label>
-                    <Input 
-                      id="telefone" 
-                      placeholder="(11) 99999-9999" 
+                    <Input
+                      id="telefone"
+                      placeholder="(11) 99999-9999"
                       value={telefone}
                       onChange={(e) => setTelefone(e.target.value)}
                       required
@@ -133,33 +133,33 @@ export function Contact() {
                 </div>
                 <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-white h-14 text-base font-bold rounded-xl mt-4 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 transition-all">
                   <Send className="mr-2 h-5 w-5" />
-                  Enviar solicitação via WhatsApp
+                  Solicitação via WhatsApp
                 </Button>
               </form>
             </div>
           </div>
-          
+
           {/* Contact Info */}
-          <div className="lg:col-span-2 space-y-4">
+          <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             {contactInfo.map((info) => (
-              <div 
-                key={info.title} 
-                className="flex gap-5 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/20 transition-all"
+              <div
+                key={info.title}
+                className="flex gap-4 sm:gap-5 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/20 transition-all"
               >
-                <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
-                  <info.icon className="h-6 w-6" />
+                <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
+                  <info.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                 </div>
-                <div>
-                  <h3 className="text-lg font-bold text-foreground">{info.title}</h3>
-                  <p className="text-base text-foreground mt-1">{info.description}</p>
-                  <p className="text-sm text-muted-foreground mt-1">{info.detail}</p>
+                <div className="min-w-0">
+                  <h3 className="text-base sm:text-lg font-bold text-foreground">{info.title}</h3>
+                  <p className="text-sm sm:text-base text-foreground mt-1 break-words">{info.description}</p>
+                  <p className="text-xs sm:text-sm text-muted-foreground mt-1">{info.detail}</p>
                 </div>
               </div>
             ))}
-            
+
             {/* Direct WhatsApp CTA */}
-            <div className="p-6 rounded-2xl bg-accent text-white">
-              <h3 className="text-lg font-bold">Prefere falar direto?</h3>
+            <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-accent text-white">
+              <h3 className="text-base sm:text-lg font-bold">Prefere falar direto?</h3>
               <p className="text-white/80 mt-1">Clique e converse agora</p>
               <Button asChild variant="secondary" className="mt-4 w-full h-12 font-bold rounded-xl">
                 <a href="https://wa.me/551141189314" target="_blank" rel="noopener noreferrer">

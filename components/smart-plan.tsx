@@ -126,7 +126,7 @@ function ImageCarousel({ images, title, icon: Icon }: { images: typeof facialIma
 
 export function SmartPlan() {
   return (
-    <section id="plano-inteligente" className="py-24 lg:py-32 bg-gradient-to-br from-[#0d1117] via-[#161b22] to-[#0d1117] text-white relative overflow-hidden">
+    <section id="plano-inteligente" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-br from-[#0d1117] via-[#161b22] to-[#0d1117] text-white relative overflow-hidden">
       {/* Background effects */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-1/4 left-0 w-[500px] h-[500px] bg-emerald-500/10 rounded-full blur-[120px]" />
@@ -136,17 +136,17 @@ export function SmartPlan() {
       {/* Grid pattern overlay */}
       <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.02)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.02)_1px,transparent_1px)] bg-[size:64px_64px]" />
       
-      <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Header */}
-        <div className="text-center max-w-4xl mx-auto mb-16">
+        <div className="text-center max-w-4xl mx-auto mb-10 sm:mb-16">
           <div className="inline-flex items-center gap-2 bg-emerald-500/20 border border-emerald-400/30 rounded-full px-5 py-2 mb-8">
             <Sparkles className="h-5 w-5 text-emerald-400" />
             <span className="text-emerald-400 font-bold text-sm uppercase tracking-wider">Oferta Exclusiva</span>
           </div>
           
-          <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.05] text-balance">
+          <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.05] text-balance">
             <span className="text-emerald-400">Plano Inteligente</span>
-            <span className="block text-white mt-2">para Condomínios</span>
+            <span className="block text-white mt-2 text-2xl sm:text-3xl lg:text-4xl">para Condomínios</span>
           </h2>
           
           <p className="mt-8 text-xl text-white/70 leading-relaxed max-w-3xl mx-auto">
@@ -156,11 +156,11 @@ export function SmartPlan() {
         </div>
         
         {/* Main content grid */}
-        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 mb-16">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-12 mb-10 sm:mb-16">
           {/* Left - Benefits Card */}
           <div className="relative order-2 lg:order-1">
-            <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-3xl blur-xl" />
-            <div className="relative bg-white/5 backdrop-blur-sm rounded-3xl p-8 lg:p-10 border border-white/10 h-full">
+            <div className="absolute -inset-2 bg-gradient-to-r from-emerald-500/20 to-blue-500/20 rounded-2xl sm:rounded-3xl blur-xl" />
+            <div className="relative bg-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl p-6 sm:p-8 lg:p-10 border border-white/10 h-full">
               <div className="flex items-center gap-3 mb-8">
                 <div className="flex h-12 w-12 items-center justify-center rounded-2xl bg-emerald-500">
                   <Shield className="h-6 w-6 text-white" />
@@ -224,8 +224,8 @@ export function SmartPlan() {
         </div>
         
         {/* Impact phrase */}
-        <div className="text-center mb-12">
-          <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-white leading-tight text-balance">
+        <div className="text-center mb-8 sm:mb-12">
+          <p className="text-xl sm:text-2xl lg:text-3xl font-black text-white leading-tight text-balance">
             Mais segurança, menos custo inicial e 
             <span className="text-emerald-400"> tecnologia que vira patrimônio</span> do condomínio.
           </p>
@@ -233,15 +233,16 @@ export function SmartPlan() {
         
         {/* CTA */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-          <Button asChild size="lg" className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white h-16 px-10 text-lg font-bold rounded-xl shadow-xl shadow-emerald-500/20">
+          <Button asChild size="lg" className="w-full sm:w-auto bg-emerald-500 hover:bg-emerald-600 text-white h-14 sm:h-16 px-6 sm:px-10 text-base sm:text-lg font-bold rounded-xl shadow-xl shadow-emerald-500/20">
             <a 
               href="https://wa.me/551152419494?text=Olá!%20Gostaria%20de%20um%20orçamento%20para%20o%20Plano%20Inteligente%20com%20comodato."
               target="_blank"
               rel="noopener noreferrer"
+              className="flex items-center justify-center"
             >
-              <Phone className="mr-3 h-5 w-5" />
-              Solicitar Orçamento
-              <ArrowRight className="ml-3 h-5 w-5" />
+              <Phone className="mr-2 sm:mr-3 h-5 w-5 shrink-0" />
+              <span>Solicitar Orçamento</span>
+              <ArrowRight className="ml-2 sm:ml-3 h-5 w-5 shrink-0" />
             </a>
           </Button>
           <p className="text-white/50 text-sm">

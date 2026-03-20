@@ -25,11 +25,11 @@ const features = [
 
 export function Coverage() {
   return (
-    <section id="atuacao" className="py-28 bg-primary">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="atuacao" className="py-16 sm:py-24 lg:py-28 bg-primary overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-3xl text-center">
           <p className="text-base font-bold text-blue-400 uppercase tracking-widest">Área de Atuação</p>
-          <h2 className="mt-4 text-4xl font-extrabold tracking-tight text-primary-foreground sm:text-5xl text-balance">
+          <h2 className="mt-4 text-3xl font-extrabold tracking-tight text-primary-foreground sm:text-4xl lg:text-5xl text-balance">
             Atendimento em São Paulo - SP
           </h2>
           <p className="mt-6 text-xl text-gray-300 text-pretty leading-relaxed">
@@ -37,7 +37,7 @@ export function Coverage() {
           </p>
         </div>
         
-        <div className="mx-auto mt-20 grid max-w-4xl gap-10 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="mx-auto mt-12 sm:mt-20 grid max-w-4xl gap-8 sm:gap-10 grid-cols-2 lg:grid-cols-4">
           {features.map((feature) => (
             <div key={feature.title} className="text-center">
               <div className="mx-auto mb-6 flex h-16 w-16 items-center justify-center rounded-2xl bg-blue-500/20 text-blue-400">

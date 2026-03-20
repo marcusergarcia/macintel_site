@@ -19,9 +19,9 @@ const navigation = {
 
 export function Footer() {
   return (
-    <footer className="bg-[#1a1a2e] text-white">
-      <div className="mx-auto max-w-7xl px-6 py-16 lg:px-8">
-        <div className="grid gap-12 lg:grid-cols-4">
+    <footer className="bg-[#1a1a2e] text-white overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 py-12 sm:py-16 lg:px-8">
+        <div className="grid gap-10 sm:gap-12 grid-cols-1 sm:grid-cols-2 lg:grid-cols-4">
           {/* Brand */}
           <div className="lg:col-span-2">
             <Link href="/" className="inline-block">

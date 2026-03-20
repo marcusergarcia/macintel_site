@@ -33,13 +33,13 @@ export function Header() {
         ? "bg-white/95 backdrop-blur-md shadow-sm border-b border-gray-100" 
         : "bg-transparent"
     }`}>
-      <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4 lg:px-8">
+      <nav className="mx-auto flex max-w-7xl items-center justify-between px-4 sm:px-6 py-3 sm:py-4 lg:px-8">
         <div className="flex lg:flex-1">
           <Link href="/" className="-m-1.5 p-1.5">
             <img
               src="/images/macintel.png"
               alt="Macintel"
-              className={`h-20 w-auto ${scrolled ? "" : "brightness-0 invert"}`}
+              className={`h-14 sm:h-20 w-auto ${scrolled ? "" : "brightness-0 invert"}`}
             />
           </Link>
         </div>
