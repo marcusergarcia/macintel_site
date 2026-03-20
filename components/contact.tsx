@@ -76,7 +76,7 @@ export function Contact() {
             Fale com nossa equipe e encontre a melhor solução para o seu condomínio.
           </p>
         </div>
-        
+
         <div className="grid grid-cols-1 gap-8 lg:gap-12 lg:grid-cols-5">
           {/* Form */}
           <div className="lg:col-span-3">
@@ -90,14 +90,14 @@ export function Contact() {
                   <p className="text-muted-foreground">Retornamos em até 1 hora</p>
                 </div>
               </div>
-              
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid sm:grid-cols-2 gap-6">
                   <div className="space-y-2">
                     <Label htmlFor="nome" className="text-base font-semibold">Nome</Label>
-                    <Input 
-                      id="nome" 
-                      placeholder="Seu nome completo" 
+                    <Input
+                      id="nome"
+                      placeholder="Seu nome completo"
                       value={nome}
                       onChange={(e) => setNome(e.target.value)}
                       required
@@ -106,9 +106,9 @@ export function Contact() {
                   </div>
                   <div className="space-y-2">
                     <Label htmlFor="telefone" className="text-base font-semibold">Telefone</Label>
-                    <Input 
-                      id="telefone" 
-                      placeholder="(11) 99999-9999" 
+                    <Input
+                      id="telefone"
+                      placeholder="(11) 99999-9999"
                       value={telefone}
                       onChange={(e) => setTelefone(e.target.value)}
                       required
@@ -133,17 +133,17 @@ export function Contact() {
                 </div>
                 <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-white h-14 text-base font-bold rounded-xl mt-4 shadow-lg shadow-accent/25 hover:shadow-xl hover:shadow-accent/30 transition-all">
                   <Send className="mr-2 h-5 w-5" />
-                  Enviar solicitação via WhatsApp
+                  Solicitação via WhatsApp
                 </Button>
               </form>
             </div>
           </div>
-          
+
           {/* Contact Info */}
           <div className="lg:col-span-2 space-y-3 sm:space-y-4">
             {contactInfo.map((info) => (
-              <div 
-                key={info.title} 
+              <div
+                key={info.title}
                 className="flex gap-4 sm:gap-5 p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-white border border-gray-100 shadow-sm hover:shadow-md hover:border-accent/20 transition-all"
               >
                 <div className="flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl bg-accent/10 text-accent">
@@ -156,7 +156,7 @@ export function Contact() {
                 </div>
               </div>
             ))}
-            
+
             {/* Direct WhatsApp CTA */}
             <div className="p-4 sm:p-6 rounded-xl sm:rounded-2xl bg-accent text-white">
               <h3 className="text-base sm:text-lg font-bold">Prefere falar direto?</h3>
