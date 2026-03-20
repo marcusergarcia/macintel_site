@@ -30,12 +30,12 @@ export function Brands() {
   )
 
   return (
-    <section className="py-16 bg-gray-50 border-y border-gray-100">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section className="py-12 sm:py-16 bg-gray-50 border-y border-gray-100 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="text-center mb-12">
-          <h2 className="text-2xl sm:text-3xl font-bold text-foreground">
-            Trabalhamos com as melhores marcas do mercado
+        <div className="text-center mb-8 sm:mb-12">
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold text-foreground">
+            Trabalhamos com as melhores marcas
           </h2>
           <p className="mt-3 text-lg text-muted-foreground">
             Equipamentos de alta qualidade para garantir segurança e durabilidade

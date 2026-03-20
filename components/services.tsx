@@ -81,15 +81,15 @@ export function Services() {
   )
 
   return (
-    <section id="servicos" className="py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
+    <section id="servicos" className="py-16 sm:py-24 lg:py-32 bg-gradient-to-b from-white to-gray-50 overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-8 mb-16">
+        <div className="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 sm:gap-8 mb-10 sm:mb-16">
           <div className="max-w-2xl">
             <span className="inline-block text-accent font-bold text-sm uppercase tracking-widest mb-4">
               Nossos Serviços
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black text-foreground leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black text-foreground leading-[1.1]">
               Soluções completas em
               <span className="text-accent"> segurança</span>
             </h2>

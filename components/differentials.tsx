@@ -30,15 +30,15 @@ const features = [
 
 export function Differentials() {
   return (
-    <section id="diferenciais" className="py-24 lg:py-32 bg-[#1a1a2e] text-white overflow-hidden">
-      <div className="mx-auto max-w-7xl px-6 lg:px-8">
-        <div className="grid gap-16 lg:grid-cols-2 items-center">
+    <section id="diferenciais" className="py-16 sm:py-24 lg:py-32 bg-[#1a1a2e] text-white overflow-hidden">
+      <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-1 gap-10 lg:gap-16 lg:grid-cols-2 items-center">
           {/* Content */}
           <div>
             <span className="inline-block text-blue-400 font-bold text-sm uppercase tracking-widest mb-4">
               Por que escolher a Macintel
             </span>
-            <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-[1.1]">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl font-black leading-[1.1]">
               Solução completa para seu 
               <span className="text-blue-400"> condomínio</span>
             </h2>
@@ -48,20 +48,20 @@ export function Differentials() {
               o <strong className="text-blue-400">CondFy</strong> para garantir mais controle, praticidade e segurança no dia a dia.
             </p>
             
-            <div className="mt-12 grid gap-6">
+            <div className="mt-8 sm:mt-12 grid gap-4 sm:gap-6">
               {features.map((feature, index) => (
                 <div 
                   key={feature.title} 
-                  className="group flex gap-5 p-5 rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300"
+                  className="group flex gap-4 sm:gap-5 p-4 sm:p-5 rounded-xl sm:rounded-2xl bg-white/5 hover:bg-white/10 border border-white/10 hover:border-white/20 transition-all duration-300"
                 >
-                  <div className={`flex h-14 w-14 shrink-0 items-center justify-center rounded-xl ${feature.color} text-white shadow-lg`}>
-                    <feature.icon className="h-6 w-6" />
+                  <div className={`flex h-12 w-12 sm:h-14 sm:w-14 shrink-0 items-center justify-center rounded-xl ${feature.color} text-white shadow-lg`}>
+                    <feature.icon className="h-5 w-5 sm:h-6 sm:w-6" />
                   </div>
-                  <div className="flex-grow">
-                    <h3 className="text-xl font-bold text-white">{feature.title}</h3>
-                    <p className="mt-1 text-base text-white/60">{feature.description}</p>
+                  <div className="flex-grow min-w-0">
+                    <h3 className="text-lg sm:text-xl font-bold text-white">{feature.title}</h3>
+                    <p className="mt-1 text-sm sm:text-base text-white/60">{feature.description}</p>
                   </div>
-                  <ArrowUpRight className="h-5 w-5 text-white/30 group-hover:text-blue-400 transition-colors shrink-0 mt-1" />
+                  <ArrowUpRight className="h-5 w-5 text-white/30 group-hover:text-blue-400 transition-colors shrink-0 mt-1 hidden sm:block" />
                 </div>
               ))}
             </div>
@@ -70,15 +70,15 @@ export function Differentials() {
           {/* Stats Card */}
           <div className="relative">
             {/* Glow effect */}
-            <div className="absolute -inset-4 bg-blue-500/20 rounded-3xl blur-3xl" />
+            <div className="absolute -inset-2 sm:-inset-4 bg-blue-500/20 rounded-2xl sm:rounded-3xl blur-3xl" />
             
-            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-3xl border border-white/20 p-10 lg:p-12">
+            <div className="relative bg-gradient-to-br from-white/10 to-white/5 backdrop-blur-sm rounded-2xl sm:rounded-3xl border border-white/20 p-6 sm:p-10 lg:p-12">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-24 h-24 rounded-2xl bg-blue-500/20 mb-8">
                   <Shield className="w-12 h-12 text-blue-400" />
                 </div>
                 
-                <p className="text-7xl lg:text-8xl font-black text-white">500<span className="text-blue-400">+</span></p>
+                <p className="text-5xl sm:text-7xl lg:text-8xl font-black text-white">500<span className="text-blue-400">+</span></p>
                 <p className="mt-4 text-2xl text-white/90 font-semibold">Condomínios atendidos</p>
                 <p className="mt-2 text-lg text-white/60">em São Paulo - SP</p>
                 

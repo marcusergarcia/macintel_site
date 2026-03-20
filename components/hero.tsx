@@ -19,8 +19,8 @@ export function Hero() {
         <div className="absolute -bottom-40 -left-40 w-80 h-80 bg-accent/10 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 py-32 lg:px-8 w-full">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
+      <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6 py-24 sm:py-32 lg:px-8 w-full">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           {/* Content */}
           <div className="text-center lg:text-left">
             <div className="inline-flex items-center gap-2 rounded-full bg-white/10 backdrop-blur-sm border border-white/20 px-5 py-2.5 mb-8">
@@ -30,7 +30,7 @@ export function Hero() {
               </span>
             </div>
 
-            <h1 className="text-4xl font-black tracking-tight text-white sm:text-5xl lg:text-6xl xl:text-7xl leading-[1.1]">
+            <h1 className="text-3xl font-black tracking-tight text-white sm:text-4xl lg:text-5xl xl:text-6xl leading-[1.1]">
               Segurança
               <span className="block text-blue-400">Inteligente</span>
               <span className="block text-white/90">para Condomínios</span>
@@ -57,15 +57,15 @@ export function Hero() {
             </div>
 
             {/* Stats inline */}
-            <div className="mt-16 grid grid-cols-3 gap-8">
+            <div className="mt-10 sm:mt-16 grid grid-cols-3 gap-4 sm:gap-8">
               {[
                 { value: "15+", label: "Anos" },
                 { value: "500+", label: "Condomínios" },
                 { value: "100%", label: "Satisfação" },
               ].map((stat) => (
                 <div key={stat.label} className="text-center lg:text-left">
-                  <p className="text-3xl sm:text-4xl font-black text-white">{stat.value}</p>
-                  <p className="mt-1 text-sm text-white/60 font-medium">{stat.label}</p>
+                  <p className="text-2xl sm:text-3xl lg:text-4xl font-black text-white">{stat.value}</p>
+                  <p className="mt-1 text-xs sm:text-sm text-white/60 font-medium">{stat.label}</p>
                 </div>
               ))}
             </div>
